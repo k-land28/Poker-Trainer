@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Preflop Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+</head>
+<body>
+  <div id="splashScreen" class="splash-screen">
+    <p class="splash-title">Poker Trainer</p>
+    <p class="loading-text">Loading<span class="dot">.</span></p>
+  </div>
+  
+  <h1>Preflop Trainer</h1>
+
+  <div id="tabs">
+    <button class="tab-button active" data-mode="openraise">Open Raise</button>
+    <button class="tab-button" data-mode="vs_open">VS Open</button>
+    <button class="tab-button" data-mode="vs_3bet">VS 3Bet</button>
+    <button class="tab-button" data-mode="bbdefense">BB Defense</button>
+  </div>
+
+  <div id="table" class="table"></div>
+
+  <p id="situationText"></p>
+  <p id="handText"></p>
+  <div id="actionButtons"></div>
+  <p id="resultText"></p>
+  <button id="nextButton">NEXT</button>
+
+  <script src="main.js"></script>
+  <script src="modes/preflop-trainer/preflop-trainer.js"></script>
+</body>
+</html>

@@ -5,6 +5,6 @@ export function showHeadsUpMode() {
   // メイン表示を更新（戻るボタンは削除）
   const mainContent = document.getElementById("mainContent");
   mainContent.innerHTML = `
-    <p>ここがヘッズアップの画面だよ！</p>
+    <p>ここがヘッズアップの画面だよ！ななちゃんの要望で作ります！</p>
   `;
 }

@@ -1,0 +1,10 @@
+export function showHeadsUpMode() {
+  // タイトルを更新
+  document.getElementById("modeTitle").textContent = "ヘッズアップトレーニング";
+
+  // メイン表示を更新（戻るボタンは削除）
+  const mainContent = document.getElementById("mainContent");
+  mainContent.innerHTML = `
+    <p>ここがヘッズアップの画面だよ！</p>
+  `;
+}

@@ -112,6 +112,45 @@ export async function showPreflopTrainer() {
     ]);
   }
 
+  // === アクション対象外プレイヤー ===
+  function getFoldingPlayers(mode, hero, villain = null) {
+    const heroIndex = positions.indexOf(hero);
+    const villainIndex = villain ? positions.indexOf(villain) : -1;
+    return positions.filter((pos, i) => {
+      if (pos === hero) return false;
+      if (mode === 'openraise') return i < heroIndex;
+      if (mode === 'vs_open') return i < heroIndex && pos !== villain;
+      if (mode === 'vs_3bet' || mode === 'bbdefense') return pos !== hero && pos !== villain;
+      return false;
+    });
+  }
+
+  // === 盤面描画 ===
+  function renderPositions(selected, enemy = null) {
+    table.innerHTML = '';
+    const W = table.clientWidth, H = table.clientHeight;
+    const cx = W / 2, cy = H / 2, rx = W * 0.35, ry = H * 0.35;
+
+    const folded = getFoldingPlayers(currentMode, selected, enemy);
+
+    positions.forEach((pos, i) => {
+      const deg = ((i - positions.indexOf(selected) + positions.length) % positions.length) * 60 + 90;
+      const rad = deg * Math.PI / 180;
+      const x = cx + rx * Math.cos(rad);
+      const y = cy + ry * Math.sin(rad);
+
+      const div = document.createElement('div');
+      div.className = 'position';
+      div.textContent = pos;
+      div.style.left = `${x - 25}px`;
+      div.style.top = `${y - 15}px`;
+      if (pos === selected) div.classList.add('active-position');
+      if (pos === enemy) div.classList.add('enemy-position');
+      if (folded.includes(pos)) div.classList.add('folded-position');
+      table.appendChild(div);
+    });
+  }
+
   // === 問題生成関数 ===
   function generateOpenraiseQuestion() {
     if (!allOpenraiseHandsList.length) return null;
@@ -131,7 +170,7 @@ export async function showPreflopTrainer() {
     return {
       situation: `${q.opener}がOpenしました。${q.position}のアクションは？`,
       correct: q.correct,
-      choices: ['Call', 'Fold', '3Bet / Raise 4Bet', '3Bet / Call 4Bet', '3Bet / Fold 4Bet'],
+      choices: ['Call', 'Fold', '3Bet/Raise', '3Bet/Call', '3Bet/Fold'],
       position: q.position,
       opener: q.opener,
       hand: q.hand
@@ -142,9 +181,9 @@ export async function showPreflopTrainer() {
     if (!allVs3BetHandsList.length) return null;
     const q = allVs3BetHandsList[Math.floor(Math.random() * allVs3BetHandsList.length)];
     return {
-      situation: `${q.opener}に対し${q.threeBetter}が3Bet。${q.opener}のアクションは？`,
+      situation: `${q.opener}のOpen Raiseに対し${q.threeBetter}が3Bet。${q.opener}のアクションは？`,
       correct: q.correct,
-      choices: ['Call', 'Fold', '3Bet / Raise 4Bet', '3Bet / Call 4Bet', '3Bet / Fold 4Bet'],
+      choices: ['Call', 'Fold', '4Bet/Raise', '4Bet/Call', '4Bet/Fold'],
       position: q.opener,
       threeBetter: q.threeBetter,
       hand: q.hand
@@ -157,34 +196,11 @@ export async function showPreflopTrainer() {
     return {
       situation: `${q.opener}が${q.size}でOpen。BBのアクションは？`,
       correct: q.correct,
-      choices: ['Call', 'Fold', '3Bet / Raise 4Bet', '3Bet / Call 4Bet', '3Bet / Fold 4Bet'],
+      choices: ['Call', 'Fold', '3Bet/Raise', '3Bet/Call', '3Bet/Fold'],
       position: 'BB',
       opener: q.opener,
       hand: q.hand
     };
-  }
-
-  // === 盤面描画 ===
-  function renderPositions(selected, enemy = null) {
-    table.innerHTML = '';
-    const W = table.clientWidth, H = table.clientHeight;
-    const cx = W / 2, cy = H / 2, rx = W * 0.35, ry = H * 0.35;
-
-    positions.forEach((pos, i) => {
-      const deg = ((i - positions.indexOf(selected) + positions.length) % positions.length) * 60 + 90;
-      const rad = deg * Math.PI / 180;
-      const x = cx + rx * Math.cos(rad);
-      const y = cy + ry * Math.sin(rad);
-
-      const div = document.createElement('div');
-      div.className = 'position';
-      div.textContent = pos;
-      div.style.left = `${x - 25}px`;
-      div.style.top = `${y - 15}px`;
-      if (pos === selected) div.classList.add('active-position');
-      if (pos === enemy) div.classList.add('enemy-position');
-      table.appendChild(div);
-    });
   }
 
   // === 問題表示 ===
@@ -222,6 +238,13 @@ export async function showPreflopTrainer() {
         /call/i.test(choice) ? 'call' : 'raise'
       );
       btn.addEventListener('click', () => {
+        actionButtons.querySelectorAll('button').forEach(b => {
+          if (b !== btn) {
+            b.disabled = true;
+            b.classList.add('disabled');
+          }
+        });
+        btn.disabled = true;
         if (choice === currentQuestion.correct) {
           resultText.style.color = '#0faa00';
           resultText.textContent = '正解！🎉';
@@ -233,7 +256,6 @@ export async function showPreflopTrainer() {
       actionButtons.appendChild(btn);
     });
 
-    // アニメーション適用
     const contentElements = [situationText, handText, actionButtons, nextButton];
     contentElements.forEach(el => {
       el.classList.remove('fade-slide-in');
@@ -242,7 +264,6 @@ export async function showPreflopTrainer() {
     });
   }
 
-  // タブ切り替え
   document.querySelectorAll('.tab-button').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
@@ -252,10 +273,8 @@ export async function showPreflopTrainer() {
     });
   });
 
-  // NEXTボタン
   nextButton.addEventListener('click', displayQuestion);
 
-  // 一括ロードしてから初期表示
   await loadAllRanges();
   displayQuestion();
 }

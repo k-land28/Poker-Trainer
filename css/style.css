@@ -249,6 +249,11 @@ body.no-scroll {
   user-select: none;
 }
 
+/* スマホでのタップ時に黒くなるのを防ぐ */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 #resultText {
   font-size: 1.2rem;
   margin-top: 1rem;

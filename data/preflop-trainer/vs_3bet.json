@@ -1,0 +1,289 @@
+{
+  "EP": {
+    "MP": {
+      "hands": {
+        "AA": "4Bet / Call 5Bet", "KK": "4Bet / Fold 5Bet", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise",
+        "JTs": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise",
+        "KQo": "Raise", "KJo": "Raise"
+      }
+    },
+    "CO": {
+      "hands": {
+        "AA": "4Bet / Call 5Bet", "KK": "4Bet / Fold 5Bet", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise",
+        "JTs": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise",
+        "KQo": "Raise", "KJo": "Raise"
+      }
+    },
+    "BTN": {
+      "hands": {
+        "AA": "4Bet / Call 5Bet", "KK": "4Bet / Fold 5Bet", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise",
+        "JTs": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise",
+        "KQo": "Raise", "KJo": "Raise"
+      }
+    },
+    "SB": {
+      "hands": {
+        "AA": "4Bet / Call 5Bet", "KK": "4Bet / Fold 5Bet", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise",
+        "JTs": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise",
+        "KQo": "Raise", "KJo": "Raise"
+      }
+    },
+    "BB": {
+      "hands": {
+        "AA": "4Bet / Call 5Bet", "KK": "4Bet / Fold 5Bet", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise",
+        "JTs": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise",
+        "KQo": "Raise", "KJo": "Raise"
+      }
+    }
+  },
+  "MP": {
+    "CO": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise",
+        "JTs": "Raise", "J9s": "Raise",
+        "T9s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise"
+      }
+    },
+    "BTN": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise",
+        "JTs": "Raise", "J9s": "Raise",
+        "T9s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise"
+      }
+    },
+    "SB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise",
+        "JTs": "Raise", "J9s": "Raise",
+        "T9s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise"
+      }
+    },
+    "BB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise",
+        "JTs": "Raise", "J9s": "Raise",
+        "T9s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise"
+      }
+    }
+  },
+  "CO": {
+    "BTN": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise",
+        "T9s": "Raise", "T8s": "Raise",
+        "98s": "Raise", "87s": "Raise", "76s": "Raise", "65s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise", "QTo": "Raise",
+        "JTo": "Raise"
+      }
+    },
+    "SB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise",
+        "T9s": "Raise", "T8s": "Raise",
+        "98s": "Raise", "87s": "Raise", "76s": "Raise", "65s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise", "QTo": "Raise",
+        "JTo": "Raise"
+      }
+    },
+    "BB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise",
+        "T9s": "Raise", "T8s": "Raise",
+        "98s": "Raise", "87s": "Raise", "76s": "Raise", "65s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise",
+        "QJo": "Raise", "QTo": "Raise",
+        "JTo": "Raise"
+      }
+    }
+  },
+  "BTN": {
+    "SB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "K7s": "Raise", "K6s": "Raise", "K5s": "Raise", "K4s": "Raise", "K3s": "Raise",
+        "K2s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise", "Q7s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise", "J7s": "Raise",
+        "T9s": "Raise", "T8s": "Raise", "T7s": "Raise",
+        "98s": "Raise", "97s": "Raise", "96s": "Raise",
+        "87s": "Raise", "86s": "Raise",
+        "76s": "Raise", "75s": "Raise",
+        "65s": "Raise", "64s": "Raise",
+        "54s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "A8o": "Raise", "A7o": "Raise", "A6o": "Raise", "A5o": "Raise", "A4o": "Raise",
+        "A3o": "Raise", "A2o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise", "K9o": "Raise",
+        "QJo": "Raise", "QTo": "Raise", "Q9o": "Raise",
+        "JTo": "Raise", "J9o": "Raise"
+      }
+    },
+    "BB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "K7s": "Raise", "K6s": "Raise", "K5s": "Raise", "K4s": "Raise", "K3s": "Raise",
+        "K2s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise", "Q7s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise", "J7s": "Raise",
+        "T9s": "Raise", "T8s": "Raise", "T7s": "Raise",
+        "98s": "Raise", "97s": "Raise", "96s": "Raise",
+        "87s": "Raise", "86s": "Raise",
+        "76s": "Raise", "75s": "Raise",
+        "65s": "Raise", "64s": "Raise",
+        "54s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "A8o": "Raise", "A7o": "Raise", "A6o": "Raise", "A5o": "Raise", "A4o": "Raise",
+        "A3o": "Raise", "A2o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise", "K9o": "Raise",
+        "QJo": "Raise", "QTo": "Raise", "Q9o": "Raise",
+        "JTo": "Raise", "J9o": "Raise"
+      }
+    }
+  },
+  "SB": {
+    "BB": {
+      "hands": {
+        "AA": "Raise", "KK": "Raise", "QQ": "Raise", "JJ": "Raise", "TT": "Raise",
+        "99": "Raise", "88": "Raise", "77": "Raise", "66": "Raise", "55": "Raise",
+        "44": "Raise", "33": "Raise", "22": "Raise",
+        "AKs": "Raise", "AQs": "Raise", "AJs": "Raise", "ATs": "Raise", "A9s": "Raise",
+        "A8s": "Raise", "A7s": "Raise", "A6s": "Raise", "A5s": "Raise", "A4s": "Raise",
+        "A3s": "Raise", "A2s": "Raise",
+        "KQs": "Raise", "KJs": "Raise", "KTs": "Raise", "K9s": "Raise", "K8s": "Raise",
+        "K7s": "Raise", "K6s": "Raise", "K5s": "Raise", "K4s": "Raise", "K3s": "Raise",
+        "K2s": "Raise",
+        "QJs": "Raise", "QTs": "Raise", "Q9s": "Raise", "Q8s": "Raise", "Q7s": "Raise",
+        "Q6s": "Raise", "Q5s": "Raise", "Q4s": "Raise",
+        "JTs": "Raise", "J9s": "Raise", "J8s": "Raise", "J7s": "Raise", "J6s": "Raise",
+        "T9s": "Raise", "T8s": "Raise", "T7s": "Raise", "T6s": "Raise",
+        "98s": "Raise", "97s": "Raise", "96s": "Raise",
+        "87s": "Raise", "86s": "Raise", "85s": "Raise",
+        "76s": "Raise", "75s": "Raise", "74s": "Raise",
+        "65s": "Raise", "64s": "Raise",
+        "54s": "Raise", "53s": "Raise",
+        "43s": "Raise",
+        "32s": "Raise",
+        "AKo": "Raise", "AQo": "Raise", "AJo": "Raise", "ATo": "Raise", "A9o": "Raise",
+        "A8o": "Raise", "A7o": "Raise", "A6o": "Raise", "A5o": "Raise", "A4o": "Raise",
+        "A3o": "Raise", "A2o": "Raise",
+        "KQo": "Raise", "KJo": "Raise", "KTo": "Raise", "K9o": "Raise", "K8o": "Raise",
+        "QJo": "Raise", "QTo": "Raise", "Q9o": "Raise", "Q8o": "Raise",
+        "JTo": "Raise", "J9o": "Raise", "J8o": "Raise",
+        "T9o": "Raise", "T8o": "Raise",
+        "98o": "Raise"
+      }
+    }
+  }
+}

@@ -52,9 +52,9 @@ const basePath = location.hostname === 'localhost'
   : '/Poker-Trainer';
 
 // 🎵 音声ファイル（SE）読み込み
-const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
-const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
-const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
+  const seWarn30 = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/warn30.mp3');
+  const seLevelUp = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/levelup.mp3');
+  const seBreak = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/break.mp3');
   let hasPlayedWarn30 = false; // 30秒前サウンド重複防止
 
   // ▼ 追加：SE再生関数（ON設定なら再生）

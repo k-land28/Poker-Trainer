@@ -1,0 +1,198 @@
+/* rangeのスタイル */
+.range-body {
+  background: linear-gradient(135deg, #0d0c1d, #c7c739);
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;  
+
+}
+
+#range-tabs {
+  margin-bottom: 0.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+}
+
+.range-tab-button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.range-tab-button.active {
+  background-color: #00bcd4;
+}
+
+#range-grid {
+  overflow-x: auto;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 26px);
+  gap: 1px;
+  justify-content: center; /* 中央寄せ */
+  margin: 0 auto;
+}
+
+.range-cell {
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+#range-position-selector {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-position {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  min-width: 30px; 
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.range-position.active {
+  background-color: #00bcd4;
+}
+
+
+/* 共通 */
+.range-raise { background-color: #4CAF50; color: #fff;} 
+.range-call { background-color: #00cc99; color: #fff;}  
+.range-fold { background-color: #959090; color: #fff;}
+
+/*vs_open*/
+.range-3bet-raise { background-color: #ff0303; color: #fff;} 
+.range-3bet-call { background-color: #f27406; color: #fff;} 
+.range-3bet-fold { background-color: #dcd80b; color: #fff;} 
+
+/*vs_3bet*/
+.range-4bet-allin { background-color: #f50202; color: #fff;}
+.range-4bet-fold { background-color: #dc9a0b; color: #fff;} 
+
+/* BTN用 */
+.range-raise-4bet { background-color: #ff4d4d; color: #fff;}
+.range-raise-call { background-color: #ff9900; color: #fff;}
+.range-raise-fold { background-color: #ffcc66; color: #fff;}
+
+/* headsup_BB用 */
+.range-3bet-allin { background-color: #9900cc; color: #fff;}
+
+
+#range-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.range-legend-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+  line-height: 1;
+}
+
+.range-legend-color {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.range-legend-label {
+  line-height: 1;
+}
+
+.range-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  min-height: 34px; /* ← ポジションボタンと合わせる */
+}
+
+.range-dropdown-button {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  width: 101px;
+  min-width: 80px;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: none;
+  transition: background-color 0.2s ease;
+  line-height: 1.2;
+  height: 34px; /* ★ ここで縦幅を統一 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-dropdown-button.active {
+  background-color: #00bcd4;
+}
+
+.range-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  z-index: 10;
+  min-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.range-dropdown-item {
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #444;
+  color: #fff;
+  border-bottom: 1px solid #555;
+}
+
+.range-dropdown-item:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}

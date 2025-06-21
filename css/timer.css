@@ -1,0 +1,264 @@
+/* タイマーのスタイル */
+.timer-body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0d0c1d, #3b0a60);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#timer-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+#timer-timer {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  color: #00ffe7;
+  text-shadow: 0 0 20px #00ffe7;
+}
+
+.blinds-line {
+  font-size: 1.2em;
+  margin: 8px 0;
+  color: #cccccc;
+}
+
+#timer-blinds {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #00ffe7;
+  background-color: rgba(0, 255, 231, 0.1);
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 255, 231, 0.4);
+  text-shadow: 0 0 4px rgba(0, 255, 231, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+
+.timer-info {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.timer-info div {
+  margin: 6px 0;
+  font-size: 1.4rem;
+  word-break: break-word;
+}
+
+.timer-controls {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.timer-controls button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ffe7;
+  color: #0d0c1d;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe7;
+  transition: background-color 0.2s;
+}
+
+.timer-controls button:hover {
+  background-color: #00ddcc;
+}
+
+#timer-seatopen-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#timer-reentry-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .timer-body {
+    justify-content: flex-start; /* 上に寄せる */
+    padding-top: 1rem;           /* 上の余白少なめ */
+    padding-bottom: 0.5rem;      /* 下の余白もっと詰める */
+  }
+
+  #timer-title {
+    margin-top: 0.5rem;          /* タイトルもさらに詰めたいなら */
+    font-size: 1.2rem;           /* 小さめにするのも可 */
+  }
+
+  #timer-timer {
+    font-size: 4rem;             /* タイマー文字も少し縮められる */
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #222;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.timer-modal-setting:hover {
+  background: #444;
+}
+
+.timer-modal-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(105, 41, 209);
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.timer-modal-setting > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.timer-modal-setting.locked {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* プレイ人数選択ボタン共通 */
+.timer-modal-players-btn {
+  display: inline-block;
+  padding: 4px 9px;        /* ← 内側の余白をやや小さく */
+  margin: 0 0px 0px 0;     /* ← 外側の余白を縮小 */
+  font-size: 13px;         /* ← 文字サイズもやや小さく */
+  font-weight: normal;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background-color: rgb(105, 41, 209);
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 選択中のプレイ人数ボタン */
+.timer-modal-players-btn.selected {
+  background: #fff;
+  color: #6929d1; /* ベースの紫に近い色 */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #6929d1;
+}
+
+.timer-modal-close-btn {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.timer-modal-close-btn:hover {
+  background-color: #666;
+}
+
+/* リセット確認モーダル */
+.timer-reset-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.timer-reset-dialog {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 340px;
+  box-shadow: 0 0 20px rgba(0, 255, 231, 0.2);
+}
+
+.timer-reset-dialog p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #eee;
+}
+
+.timer-reset-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.timer-reset-buttons button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+#timer-reset-yes {
+  background: #ff4d4f;
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.5);
+}
+
+#timer-reset-no {
+  background: #444;
+  color: #ccc;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.timer-reset-buttons button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.timer-reset-buttons button:active {
+  transform: scale(0.95);
+}

@@ -381,7 +381,7 @@ export function showRangeMode() {
 
   async function loadRangeData(tabName) {
     try {
-      const response = await fetch(`././data/preflop-trainer/${tabName}.json`);
+      const response = await fetch(`././data/preflop-trainer/${tabName.toLowerCase()}.json`);
       if (!response.ok) {
         throw new Error(`Failed to load ${tabName}.json`);
       }

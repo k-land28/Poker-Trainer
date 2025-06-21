@@ -44,10 +44,21 @@ export function showTimerMode() {
 
   const state = window.timerState;
 
-  // ▼ 追加：SE読み込み
-  const seWarn30 = new Audio('../../data/sounds/warn30.mp3');
-  const seLevelUp = new Audio('../../data/sounds/levelup.mp3');
-  const seBreak = new Audio('../../data/sounds/break.mp3');
+// ✅ SEファイル読み込み（GitHub Pages対応）
+// ⚠️ アプリ化したらこの basePath ブロックごと削除してOK
+// 理由：PWAなどでオフライン読み込みが前提になると、相対パスで読み込むほうが安定するから
+const basePath = location.hostname === 'localhost'
+  ? '..'  // ローカル実行時
+  : 'https://k-land28.github.io/Poker-Trainer';  // GitHub Pages上での絶対パス
+
+// 🎵 サウンドファイル読み込み
+const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
+const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
+const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
+
+
+
+
   let hasPlayedWarn30 = false; // 30秒前サウンド重複防止
 
   // ▼ 追加：SE再生関数（ON設定なら再生）
@@ -206,23 +217,6 @@ export function showTimerMode() {
   }
 
   function startTimer() {
-    // 👇 ここから追加：GitHub環境用の一時Audio再生許可
-    // 🛠 アプリ化したらこのブロックごと削除してOK
-    if (!window._audioUnlockDone) {
-      try {
-        const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const src = ctx.createBufferSource();
-        src.buffer = ctx.createBuffer(1, 1, 22050);
-        src.connect(ctx.destination);
-        src.start(0);
-        window._audioUnlockDone = true;
-        console.log("🔓 Audio unlocked");
-      } catch (e) {
-        console.warn("Audio unlock failed:", e);
-      }
-    }
-    // 👆 ここまで一時対応
-
     if (state.timerInterval) clearInterval(state.timerInterval);
     state.isPaused = false;
 

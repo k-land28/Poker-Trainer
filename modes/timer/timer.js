@@ -44,35 +44,25 @@ export function showTimerMode() {
 
   const state = window.timerState;
 
-// 🔧 GitHub Pages対応用：audio再生のパス調整
-// ⚠️ アプリ化（PWA化）後はこのブロックを丸ごと削除してOK
-// ✅ 最終形：ルート絶対パス
-const basePath = location.hostname === 'localhost'
-  ? '..'
-  : 'https://k-land28.github.io/Poker-Trainer';
+  // ✅ SEファイル読み込み（GitHub Pages対応）
+  // 重要だからこのコメント消さない！🛠 一時対応：PWAなどアプリ化したらこの basePath 定義と Audio のパスごと削除してOK！
+  const basePath = location.hostname === 'localhost'
+    ? '..'  // ローカル実行時
+    : 'https://k-land28.github.io/Poker-Trainer';  // GitHub Pages上での絶対パス
 
-console.log("✅ basePath =", basePath); // ← ここ追加
-  
-const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
-console.log("🔊 warn30 path:", seWarn30.src);
+  // 🎵 サウンドファイル読み込み
+  const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
+  const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
+  const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
 
-const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
-console.log("🔊 levelup path:", seLevelUp.src);
 
-const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
-console.log("🔊 break path:", seBreak.src);
 
-  seWarn30.onerror = (e) => console.warn("❌ warn30 load error", e);
-seLevelUp.onerror = (e) => console.warn("❌ levelup load error", e);
-seBreak.onerror   = (e) => console.warn("❌ break load error", e);
   let hasPlayedWarn30 = false; // 30秒前サウンド重複防止
 
   // ▼ 追加：SE再生関数（ON設定なら再生）
   function playSE(key, audio) {
     if (loadSetting(`setting-se-${key}`, true)) {
-      audio.play().catch(err => {
-  console.warn("Audio play error:", err);
-});
+      audio.play().catch(console.warn);
     }
   }
 

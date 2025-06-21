@@ -49,12 +49,22 @@ export function showTimerMode() {
 // ✅ 最終形：ルート絶対パス
 const basePath = location.hostname === 'localhost'
   ? '..'
-  : '/Poker-Trainer';
+  : 'https://k-land28.github.io/Poker-Trainer';
 
-// 🎵 音声ファイル（SE）読み込み
-  const seWarn30 = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/warn30.mp3');
-  const seLevelUp = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/levelup.mp3');
-  const seBreak = new Audio('https://k-land28.github.io/Poker-Trainer/data/sounds/break.mp3');
+console.log("✅ basePath =", basePath); // ← ここ追加
+  
+const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
+console.log("🔊 warn30 path:", seWarn30.src);
+
+const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
+console.log("🔊 levelup path:", seLevelUp.src);
+
+const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
+console.log("🔊 break path:", seBreak.src);
+
+  seWarn30.onerror = (e) => console.warn("❌ warn30 load error", e);
+seLevelUp.onerror = (e) => console.warn("❌ levelup load error", e);
+seBreak.onerror   = (e) => console.warn("❌ break load error", e);
   let hasPlayedWarn30 = false; // 30秒前サウンド重複防止
 
   // ▼ 追加：SE再生関数（ON設定なら再生）

@@ -1,0 +1,96 @@
+/* settingのスタイル */
+.setting-body {
+  background: linear-gradient(135deg, #0d0c1d, #b40fd1);
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;
+}
+
+/* 600px以下のデバイスにのみ適用 */
+@media (max-width: 600px) {
+  .setting-body {
+    min-height: 105vh;
+  }
+}
+
+.section-setting {
+  margin-bottom: 2rem;
+}
+
+.section-setting-title {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.toggle-setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(105, 41, 209);
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.toggle-setting > div:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggle-setting.locked {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.button-setting {
+  background: #007aff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.modal-setting {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-setting.active {
+  display: flex;
+}
+
+.modal-setting-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.pro-badge {
+  background: linear-gradient(to right, gold, orange);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}

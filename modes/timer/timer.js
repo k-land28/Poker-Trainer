@@ -44,10 +44,16 @@ export function showTimerMode() {
 
   const state = window.timerState;
 
-  // ▼ 追加：SE読み込み
-  const seWarn30 = new Audio('../../data/sounds/warn30.mp3');
-  const seLevelUp = new Audio('../../data/sounds/levelup.mp3');
-  const seBreak = new Audio('../../data/sounds/break.mp3');
+// 🔧 GitHub Pages対応用：audio再生のパス調整
+// ⚠️ アプリ化（PWA化）後はこのブロックを丸ごと削除してOK
+const basePath = location.hostname === 'localhost'
+  ? '..'
+  : 'https://k-land28.github.io/Poker-Trainer';
+
+// 🎵 音声ファイル（SE）読み込み
+const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);
+const seLevelUp = new Audio(`${basePath}/data/sounds/levelup.mp3`);
+const seBreak   = new Audio(`${basePath}/data/sounds/break.mp3`);
   let hasPlayedWarn30 = false; // 30秒前サウンド重複防止
 
   // ▼ 追加：SE再生関数（ON設定なら再生）

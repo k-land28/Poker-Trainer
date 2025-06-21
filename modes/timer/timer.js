@@ -46,9 +46,10 @@ export function showTimerMode() {
 
 // 🔧 GitHub Pages対応用：audio再生のパス調整
 // ⚠️ アプリ化（PWA化）後はこのブロックを丸ごと削除してOK
+// ✅ 最終形：ルート絶対パス
 const basePath = location.hostname === 'localhost'
   ? '..'
-  : 'https://k-land28.github.io/Poker-Trainer';
+  : '/Poker-Trainer';
 
 // 🎵 音声ファイル（SE）読み込み
 const seWarn30  = new Audio(`${basePath}/data/sounds/warn30.mp3`);

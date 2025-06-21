@@ -206,6 +206,23 @@ export function showTimerMode() {
   }
 
   function startTimer() {
+    // 👇 ここから追加：GitHub環境用の一時Audio再生許可
+    // 🛠 アプリ化したらこのブロックごと削除してOK
+    if (!window._audioUnlockDone) {
+      try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const src = ctx.createBufferSource();
+        src.buffer = ctx.createBuffer(1, 1, 22050);
+        src.connect(ctx.destination);
+        src.start(0);
+        window._audioUnlockDone = true;
+        console.log("🔓 Audio unlocked");
+      } catch (e) {
+        console.warn("Audio unlock failed:", e);
+      }
+    }
+    // 👆 ここまで一時対応
+
     if (state.timerInterval) clearInterval(state.timerInterval);
     state.isPaused = false;
 

@@ -1,0 +1,362 @@
+/* rangeのスタイル */
+.range-body {
+  background: linear-gradient(135deg, #0d0c1d, #c7c739);
+  color: #eee;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;  
+
+}
+
+#range-tabs {
+  margin-bottom: 0.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+}
+
+.range-tab-button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.range-tab-button.active {
+  background-color: #00bcd4;
+}
+
+#range-grid {
+  max-width: 100%;
+  overflow-x: auto;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.range-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 26px);
+  gap: 1px;
+  justify-content: center; /* 中央寄せ */
+  margin: 0 auto;
+}
+
+.range-cell {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;   /* 垂直方向の中央揃え */
+  justify-content: center; /* 水平方向の中央揃え */
+  font-weight: bold;
+  text-align: center;
+  line-height: 24px;
+  font-size: 9px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+#range-position-selector {
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-position {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  min-width: 30px; 
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+
+.range-position.active {
+  background-color: #00bcd4;
+}
+
+
+/* OpenRaise */
+.range-raise { background-color: #27acea; color: #565757; } 
+
+/* RaiseRaise系 */
+.range-3bet-raise,
+.range-4bet-allin,
+.range-raise-4bet,
+.range-3bet-allin  {
+  background-color: #681300fc; 
+  color: #ffd000;         
+}
+
+/* RaiseCall系 */
+.range-raise-call,
+.range-3bet-call {
+  background-color: #3300ff; 
+  color: #fff;
+}
+
+/* RaiseFold系 */
+.range-raise-fold,
+.range-3bet-fold,
+.range-4bet-fold {
+  background-color: #f83333;
+  color: #2f2f2f;
+}
+
+/* Call */
+.range-call {
+  background-color: #2b9f04; 
+  color: #fff;
+}
+
+/* Fold */
+.range-fold {
+  background-color: #999999; 
+  color: #fff;
+}
+
+
+#range-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.range-legend-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2px;
+  line-height: 1;
+}
+
+.range-legend-color {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.range-legend-label {
+  line-height: 1;
+}
+
+.range-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  min-height: 34px; /* ← ポジションボタンと合わせる */
+}
+
+.range-dropdown-button {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  width: 101px;
+  min-width: 80px;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border: none;
+  transition: background-color 0.2s ease;
+  line-height: 1.2;
+  height: 34px; /* ★ ここで縦幅を統一 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range-dropdown-button.active {
+  background-color: #00bcd4;
+}
+
+.range-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+  z-index: 10;
+  min-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.range-dropdown-item {
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #444;
+  color: #fff;
+  border-bottom: 1px solid #555;
+}
+
+.range-dropdown-item:hover {
+  background-color: #00bcd4;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.range-reset-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#range-reset-button:hover {
+  background-color: #c0392b;
+}
+
+.range-edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.range-edit-modal.hidden {
+  display: none;
+}
+
+.range-edit-modal-content {
+  background: white;
+  color: #333;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+.range-edit-actions {
+  margin: 1rem 0;
+}
+
+.range-edit-action {
+  margin: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.range-edit-close {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.range-edit-button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* ボタン間の隙間を均等に */
+  margin-top: 1.5rem;
+}
+
+.range-save-button,
+.range-reset-button,
+.range-cancel-button {
+  min-width: 80px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.range-save-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.range-reset-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.range-cancel-button {
+  background-color: #666;
+  color: white;
+}
+
+.range-edit-toggle-button {
+  min-height: 35px;
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  min-width: 30px; 
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+  outline: none;
+}
+
+.range-edit-toggle-button.active {
+  background-color: #00bcd4;
+}
+
+.range-edit-action {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+
+#range-exit-confirm {
+  background: #ff4d4f;
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 77, 79, 0.5);
+}
+
+#range-exit-cancel {
+  background: #444;
+  color: #ccc;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
